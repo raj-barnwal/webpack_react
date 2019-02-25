@@ -1,0 +1,116 @@
+:root {
+  --bg-color: #000;
+  --font-color: #3f414d;
+  --main-color: #f3f3f3;
+  --white-font: #fff;
+}
+
+@import 'variable';
+
+body {
+  background: url('../../../assets/background.png') no-repeat;
+  background-size: cover;
+  font: 14px/1.3 "Source Sans Pro",sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: $bg-color;
+  padding: 15px 0;
+
+  .logo-box {
+    display: inline-block;
+
+    .logo {
+      background: url('/assets/logo.png') no-repeat;
+      float: left;
+      height: 67px;
+      width: 135px;
+    }
+  }
+}
+
+.footer {
+  background-color: $bg-color;
+  bottom: 0;
+  color: var(--white-font);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.information-container {
+  background-color: var(--main-color);
+  height: 491px;
+  margin-bottom: 30px;
+  overflow-y: auto;
+  padding-top: 30px;
+  width: 100%;
+}
+
+nav {
+  float: right;
+  line-height: 67px;
+
+  .top-nav {
+    list-style-type: none;
+  }
+}
+
+.nav-option {
+  float: left;
+  padding-right: 20px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a {
+    color: var(--white-font);
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover {
+      font-weight: 600;
+    }
+
+    &.active {
+      color: $active-color;
+      font-weight: 600;
+    }
+  }
+}
+
+.emp-table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    border: 1px solid $cell-bd-color;
+  }
+
+  th {
+    border: 1px solid $cell-bd-color;
+  }
+
+  td {
+    border: 1px solid $cell-bd-color;
+  }
+}
+
+
