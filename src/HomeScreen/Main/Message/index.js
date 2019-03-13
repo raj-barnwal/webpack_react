@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import {withRouter} from "react-router-dom";
+import React, { PureComponent } from 'react';
 
-class Message extends Component {
+class Message extends PureComponent {
     render() {
         return (
             <div>
@@ -11,5 +10,5 @@ class Message extends Component {
     }
 }
 
-export default withRouter(Message);
+export default Message;
 

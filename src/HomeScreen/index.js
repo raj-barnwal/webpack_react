@@ -1,12 +1,12 @@
-import React, { PureComponent} from 'react';
+import React, { Component} from 'react';
 
 import './stylesheet/style.scss';
 import Header from '../CommonComponents/Header';
 import Main from './Main';
 import Footer from '../CommonComponents/Footer';
-import {BrowserRouter as Router} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 
-class HomeScreen extends PureComponent {
+class HomeScreen extends Component {
     render() {
         return (
             <div className="container">
@@ -18,4 +18,4 @@ class HomeScreen extends PureComponent {
     }
 }
 
-export default HomeScreen;
+export default withRouter(HomeScreen);

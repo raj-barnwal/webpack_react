@@ -8,7 +8,7 @@
 @import 'variable';
 
 body {
-  background: url('../../../assets/background.png') no-repeat;
+  background: url('/assets/background.png') no-repeat;
   background-size: cover;
   font: 14px/1.3 "Source Sans Pro",sans-serif;
 }
@@ -106,11 +106,25 @@ nav {
 
   th {
     border: 1px solid $cell-bd-color;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
   }
 
   td {
     border: 1px solid $cell-bd-color;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
   }
 }
 
-
+.btn {
+  background-color: #2f33ff;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

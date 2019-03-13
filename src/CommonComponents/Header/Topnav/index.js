@@ -1,26 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Topnav = () => {
     return (
-        <Router>
             <nav>
                 <ul className="top-nav">
                     <li className="nav-option">
-                        <NavLink to="/index" activeClassName="active">HOME</NavLink>
+                        <Link to="/">HOME</Link>
                     </li>
                     <li className="nav-option">
-                        <NavLink to="/about" activeClassName="active">ABOUT</NavLink>
+                        <Link to="/about">ABOUT</Link>
                     </li>
                     <li className="nav-option">
-                        <NavLink to="/employee_details" activeClassName="active">EMPLOYEE DETAILS</NavLink>
+                        <Link to="/employee_details">EMPLOYEE DETAILS</Link>
                     </li>
                     <li className="nav-option">
-                        <NavLink to="/contact" activeClassName="active">CONTACT</NavLink>
+                        <Link to="/contact">CONTACT</Link>
                     </li>
                 </ul>
             </nav>
-        </Router>
     );
 };
 

@@ -1,24 +1,38 @@
-import React, { Component } from 'react';
-import {withRouter} from "react-router-dom";
+import React, {Component} from 'react';
+
+import User from './User';
+import data from './usersData';
 
 class EmployeeDetails extends Component {
     render() {
+
+        const userDetails = data.map((user) => {
+            return <User key={user.si}
+                         id={user.id}
+                         name={user.name}
+                         competency={user.competency}
+                         contact={user.contact} email={user.email} />;
+        });
+
         return (
-            <div>
-                <table className="emp-table">
-                    <thead>
-                    <tr>
-                        <th>Id.</th>
-                        <th>Name</th>
-                        <th>Competency</th>
-                        <th>Contact</th>
-                        <th>Email</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
+            <table className="emp-table">
+                <thead>
+                <tr>
+                    <th>Id.</th>
+                    <th>Name</th>
+                    <th>Competency</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                {userDetails}
+                </tbody>
+            </table>
+
         )
     }
 }
 
-export default withRouter(EmployeeDetails);
+export default EmployeeDetails;
+

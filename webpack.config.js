@@ -7,15 +7,13 @@ const extractPlugin = new ExtractTextPlugin({
     filename: './style.css'
 });
 module.exports = {
-    entry: ['babel-polyfill', './index.js'],
+    entry: ['babel-polyfill', './src/app.js'],
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
     },
-    context: path.resolve(__dirname, 'src'),
     devServer: {
-        contentBase: path.resolve(__dirname, 'dist/assets'),
         stats: 'errors-only',
         open: true,
         port: 4040,
@@ -48,7 +46,7 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: extractPlugin.extract({
-                    use: ["css-loader", "sass-loader", "postcss-loader"],
+                    use: ["css-loader", "sass-loader"],
                     fallback: 'style-loader'
                 })
             }, {
@@ -56,9 +54,6 @@ module.exports = {
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['es2015', 'react', 'stage-0']
-                    }
                 }
             },
             {

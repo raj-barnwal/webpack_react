@@ -1,8 +1,9 @@
-import React, { PureComponent} from 'react';
+import React, { Component} from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Topnav from './Topnav';
 
-class Header extends PureComponent {
+class Header extends Component {
     render() {
         return (
             <div className="header">
@@ -17,4 +18,4 @@ class Header extends PureComponent {
     }
 }
 
-export default Header;
+export default withRouter(Header);
