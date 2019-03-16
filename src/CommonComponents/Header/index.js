@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Topnav from './Topnav';
 
@@ -9,7 +9,7 @@ class Header extends Component {
             <div className="header">
                 <div className="wrapper">
                     <div className="logo-box">
-                        <i className="logo" />
+                        <Link to="/"><i className="logo" /></Link>
                     </div>
                     <Topnav />
                 </div>
@@ -18,4 +18,4 @@ class Header extends Component {
     }
 }
 
-export default withRouter(Header);
+export default Header;

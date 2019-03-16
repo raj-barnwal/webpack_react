@@ -6,13 +6,13 @@ import data from './usersData';
 class EmployeeDetails extends Component {
     render() {
 
-        const userDetails = data.map((user) => {
-            return <User key={user.si}
-                         id={user.id}
-                         name={user.name}
-                         competency={user.competency}
-                         contact={user.contact} email={user.email} />;
-        });
+        const userDetails = data.map((user => (
+            <User key={user.si}
+                  id={user.id}
+                  name={user.name}
+                  competency={user.competency}
+                  contact={user.contact} email={user.email} />
+        )));
 
         return (
             <table className="emp-table">
