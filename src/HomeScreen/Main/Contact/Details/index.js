@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Details extends Component {
-    render() {
+const Details = (props) => {
         return(
             <div>
                 <div>
                     <strong>
                         Contact Person :
                     </strong>
-                    <span onClick={this.props.clickCheck}>
-                    &nbsp;{this.props.name}
+                    <span onClick={()=>props.clickCheck}>
+                        &nbsp;{props.name}
                     </span>
                 </div>
                 <div>
                     <strong>
                         Contact :
                     </strong>
-                    &nbsp;{this.props.contact}
+                    &nbsp;{props.contact}
                 </div>
-                <input type="text" onChange={this.props.changedName} value={this.props.name} />
+                <input type="text" onChange={()=>props.changedName} value={props.name} />
             </div>
         )
-    }
-}
+};
 
 export default Details;
 

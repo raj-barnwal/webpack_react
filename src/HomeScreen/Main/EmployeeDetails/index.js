@@ -4,32 +4,34 @@ import User from './User';
 import data from './usersData';
 
 class EmployeeDetails extends Component {
-    render() {
 
-        const userDetails = data.map((user => (
+    deleteEmpDetailsHandler = () => {
+        console.log("abc");
+        // const userDetails = [...this.state.data];
+        // userDetails.slice(employeeIndex,1);
+        // this.setState({data:userDetails});
+    };
+
+    render() {
+        const userDetails = data.map(user => (
             <User key={user.si}
                   id={user.id}
                   name={user.name}
                   competency={user.competency}
-                  contact={user.contact} email={user.email} />
-        )));
+                  contact={user.contact} email={user.email}
+                  deleteEmpInfo={this.deleteEmpDetailsHandler}
+            />
+        ));
 
         return (
-            <table className="emp-table">
-                <thead>
-                <tr>
-                    <th>Id.</th>
-                    <th>Name</th>
-                    <th>Competency</th>
-                    <th>Contact</th>
-                    <th>Email</th>
-                </tr>
-                </thead>
-                <tbody>
-                {userDetails}
-                </tbody>
-            </table>
-
+            <div>
+                <div className="inner-heading">
+                    Employee Information
+                </div>
+                <div className="user-info-card">
+                    {userDetails}
+                </div>
+            </div>
         )
     }
 }

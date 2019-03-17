@@ -1,14 +1,12 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-class Footer extends PureComponent {
-    render() {
+const Footer = () => {
         return (
             <div className="footer">
                 TOTHENEW&copy;2019
             </div>
         )
-    }
-}
+};
 
 export default Footer;
 

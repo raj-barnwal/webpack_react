@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Topnav = () => {
+const TopNav = () => {
     return (
             <nav>
                 <ul className="top-nav">
@@ -22,4 +22,4 @@ const Topnav = () => {
     );
 };
 
-export default Topnav;
+export default TopNav;

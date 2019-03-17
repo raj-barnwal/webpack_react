@@ -30,5 +30,13 @@ export default [
         "competency": "FEEN",
         "contact": "6587102890",
         "email": "ranjeet875@gmail.com"
+    },
+    {
+        "si": 5,
+        "id": "2768",
+        "name": "Deepak",
+        "competency": "QA",
+        "contact": "6587100245",
+        "email": "deepak.qa@gmail.com"
     }
 ]

@@ -1,21 +1,21 @@
-import React, { Component} from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-import Topnav from './Topnav';
+import TopNav from './TopNav';
 
-class Header extends Component {
-    render() {
-        return (
-            <div className="header">
-                <div className="wrapper">
-                    <div className="logo-box">
-                        <Link to="/"><i className="logo" /></Link>
-                    </div>
-                    <Topnav />
+const Header = () => {
+    return (
+        <div className="header">
+            <div className="wrapper">
+                <div className="logo-box">
+                    <Link to="/">
+                        <i className="logo" />
+                    </Link>
                 </div>
+                <TopNav />
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default Header;
